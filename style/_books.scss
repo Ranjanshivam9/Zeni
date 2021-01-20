@@ -1,0 +1,250 @@
+.books {
+	max-width: 1140px;
+	min-height: 700px;
+	margin: auto;
+
+	display: flex;
+
+	.left-div,
+	.right-div {
+		width: 50%;
+	}
+
+	.left-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	.orange-box {
+		width: 480px;
+		height: 630px;
+		background-color: $base-color;
+		position: absolute;
+		z-index: -1;
+		left: 0;
+	}
+
+	.orange-box-right {
+		width: 480px;
+		height: 630px;
+		background-color: $base-color;
+		position: absolute;
+		z-index: -1;
+		right: 0;
+	}
+
+	.left-img {
+		max-width: 500px;
+	}
+
+	.right-div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		.div-button {
+			width: max-content;
+			margin: 40px 0;
+			a {
+				text-decoration: none;
+				width: max-content;
+			}
+
+			.button-buy {
+				color: #000000;
+				font-size: 20px;
+				background: #ffffff;
+				padding: 15px 30px 15px 30px;
+				border: solid #000000 2px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.text-wrap {
+		margin: 0 20px;
+
+		h1 {
+			font-size: 25px;
+			font-weight: 700;
+			margin: 20px 0;
+		}
+
+		p {
+			font-size: 18px;
+			margin: 20px 0;
+		}
+	}
+}
+
+// change at 1024px  Maintaining the style at this stage
+
+@media (max-width: 1024px) {
+	.books {
+		max-width: 1140px;
+		min-height: 630px;
+
+		.left-div {
+			width: 50%;
+		}
+
+		.right-div {
+			width: 50%;
+
+			.div-button {
+				margin: 20px 0;
+				font-size: 16px;
+				margin-top: 50px;
+
+				.button-buy {
+					padding: 10px 20px 10px 20px;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.orange-box {
+			width: 350px;
+			height: 580px;
+		}
+
+		.orange-box-right {
+			width: 350px;
+			height: 580px;
+		}
+
+		.left-img {
+			max-width: 380px;
+		}
+
+		.text-wrap {
+			margin: 0 20px;
+
+			h1 {
+				font-size: 20px;
+				font-weight: 700;
+				margin: 20px 0;
+			}
+
+			p {
+				font-size: 16px;
+				margin: 20px 0;
+			}
+		}
+	}
+}
+
+//  Adjusting symmetry
+@media (max-width: 870px) {
+	.books {
+		.left-div {
+			width: 60%;
+		}
+
+		.right-div {
+			width: 40%;
+		}
+		.text-wrap {
+			p {
+				font-size: 14.5px;
+				margin: 20px 0;
+			}
+		}
+	}
+}
+
+//  Adjusting symmetry
+@media (max-width: 760px) {
+	.books {
+		.left-div {
+			width: 50%;
+		}
+
+		.right-div {
+			width: 50%;
+		}
+
+		.left-img {
+			max-width: 350px;
+		}
+		.text-wrap {
+			margin: 0 25px;
+			p {
+				font-size: 15px;
+				margin: 20px 0;
+			}
+		}
+	}
+}
+
+//  Changing for mobile type view
+@media (max-width: 715px) {
+	//  changing the alignment to vertical
+
+	.books {
+		display: flex;
+		flex-direction: column;
+
+		.left-div,
+		.right-div {
+			width: 100%;
+			position: relative;
+		}
+
+		// Margin-top for right-div when image slides down
+
+		.right-div {
+			margin-top: 50px;
+		}
+
+		//  color to parent div for back-gnd
+		.left-div {
+			background-color: $base-color;
+		}
+
+		// displaying none to orange box and gave color to the parent div instaed easy to emplement
+		.orange-box,
+		.orange-box-right {
+			display: none;
+		}
+
+		//  Changing the order of the second div
+
+		.book2-img {
+			order: 1;
+			margin-top: 35px;
+		}
+
+		.book2-text {
+			order: 2;
+		}
+
+		// Changign the postion of the image to make the overlay effect as if image is below the orange back-grnd
+
+		.left-img {
+			position: relative;
+			top: 40px;
+		}
+	}
+}
+
+@media (max-width: 715px) {
+	.books {
+		.left-div,
+		.right-div {
+			min-height: 250px;
+		}
+		.book2-img {
+			min-height: 150px;
+		}
+
+		.book-img-1 {
+			max-width: 250px;
+		}
+		.book-img-2 {
+			max-width: 300px;
+		}
+	}
+}
