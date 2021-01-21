@@ -670,6 +670,15 @@ footer .footer-container .digi-wiz-logo p {
   margin: 0 15px;
 }
 
+footer .footer-container .copyright {
+  text-decoration: none;
+  color: black;
+}
+
+footer .footer-container .copyright p {
+  margin: 0;
+}
+
 @media (max-width: 1024px) {
   .landing-page .landing-container {
     display: -webkit-box;
