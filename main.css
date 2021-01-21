@@ -926,6 +926,9 @@ footer .footer-container .copyright p {
     padding-top: 20px;
     margin-bottom: 10px;
   }
+  footer .footer-container .copyright p {
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 564px) {
